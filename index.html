@@ -1,0 +1,19 @@
+---
+layout: default
+title: home 
+---
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <h1>Musings</h1>
+  <ul class="posts">
+      <li><span></span> &raquo; <a href="http://flix.schmohl.io">netflix and crill. Criterion collection on Netflix.</a></li>
+      <li><span></span> &raquo; <a href="http://trump.schmohl.io">NY Times loves Trump rn.</a></li>
+  </ul>
+</div>

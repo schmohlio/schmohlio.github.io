@@ -1,0 +1,12 @@
+name: schmohl.io 
+job: Software Engineer
+baseurl: ""
+url: "schmohlio.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+highlighter: pygment 
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
