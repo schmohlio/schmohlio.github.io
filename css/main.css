@@ -19,8 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 a         { color: #F92672; text-decoration: none; }
-a:hover   { -mox-opacity: 0.5; -webkit-opacity: 0.5; text-decoration: none; }
-a:visited { color: #272822; text-decoration: none; }
+a:hover   { text-decoration: underline; }
 
 ul.posts {
   list-style-type: none;
@@ -85,7 +84,7 @@ ul.posts span {
 .site .footer {
   font-weight: 300;
   font-size: 80%;
-  color: #95a5a6;
+  color: black;
   border-top: 4px solid #eee;
   margin-top: 2em;
   overflow: hidden;
@@ -97,7 +96,7 @@ ul.posts span {
 }
 
 .site .footer .contact a {
-  color: #A6E22E;
+  color: #95a5a6;
 }
 
 .site .footer img {
@@ -108,7 +107,7 @@ ul.posts span {
 }
 
 .site h2 {
-  color: #e74c3c;
+  color: #F92672;
   font-weight: 300;
   font-size: 2em;
 }
@@ -151,8 +150,9 @@ ul.posts span {
 }
 
 .post h3 {
-  color: #e74c3c;
+  color: #F92672;
   font-weight: 300;
   font-size: 1.4em;
   margin-top: 1em;
 }
+
