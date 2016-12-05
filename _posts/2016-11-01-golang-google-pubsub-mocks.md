@@ -161,12 +161,12 @@ func (p *fakePuller) Pull() <-chan envelope {
 
 	return out
 }
-
 ```
 
 ### Usage 
 
 In our application: 
+
 ```
 func CountWords(p puller) (num int) {
 	for sentence := range p.Pull() {
@@ -177,6 +177,7 @@ func CountWords(p puller) (num int) {
 ```
 
 and in our tests:
+
 ```
 func TestCountWords(t *testing.T) {
 	expected := 5
