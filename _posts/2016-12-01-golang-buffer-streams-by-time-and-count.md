@@ -9,6 +9,7 @@ The Go Blog has released some great articles on concurrency patterns; thanks Go 
 illustrates the simplicity of processing data across different stages in the application. 
 
 In the examples, stages are encapsulated by functions that ingest and create channels:
+
 ```
 // producer 
 func gen(cfg Config) <-chan T1  { ... }
@@ -25,6 +26,7 @@ func sink(c <-chan T2) {
 ```
 
 Furthermore, we can fanout such a sink operation, since channels are thread-safe:
+
 ```
 func work(n int, c <-chan T2) {
 	var wg sync.WaitGroup
@@ -43,6 +45,7 @@ func work(n int, c <-chan T2) {
 
 If our sink is performing some sort of intensive I/O with a client, such as logging or inserting multiple records to a database, We may want to process our last stage in batches, i.e. `T2[]`.
 We can refactor our sink code to write batches of messages, and to flush based on capacity and time:
+
 ```
 func writeBatch([]T2) error { ... }
 
